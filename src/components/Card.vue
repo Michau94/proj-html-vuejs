@@ -1,28 +1,34 @@
 <template>
-  <div class="card d-flex">
+  <div class="card d-flex" :class="cardType">
     <slot></slot>
 
-    <div class="count">{{ count }}</div>
+    <div class="title">{{ title }}</div>
 
-    <div class="description">Planning applications</div>
+    <slot name="middle"></slot>
+
+    <div class="description">{{ text }}</div>
+
+    <slot name="bottom"></slot>
   </div>
 </template>
 
 <script>
 export default {
   name: "Card",
-  props: ["count"],
+  props: ["title", "text", "cardType"],
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../scss/vars";
-.card {
+
+.basic {
   background: transparent;
   border: transparent;
   color: #fff;
   font-weight: 600;
-  .count {
+
+  .title {
     color: $secondary;
     font-size: 3rem;
   }
@@ -30,5 +36,49 @@ export default {
   i {
     color: $secondary;
   }
+}
+
+.standard {
+  background: transparent;
+  border: transparent;
+  color: #1e1e1e;
+  font-weight: 200;
+  .title {
+    color: Black;
+    font-size: 1.2rem;
+  }
+  flex-basis: 20%;
+  padding: 10px;
+  .icon {
+    i.far,
+    i.fas {
+      display: inline-block;
+      border-radius: 50%;
+      box-shadow: 0px 0px 2px;
+      padding: 0.5em 0.6em;
+    }
+    i.fas {
+      background-color: cadetblue;
+      color: #fff;
+    }
+  }
+
+  i {
+    color: #fff;
+  }
+}
+
+.alternative {
+  background: lightgray;
+  color: #1e1e1e;
+  font-weight: 200;
+  .title {
+    color: Black;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  flex-basis: 20%;
+  padding: 10px;
 }
 </style>
