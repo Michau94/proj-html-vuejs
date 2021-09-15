@@ -6,15 +6,20 @@
       <h4>Do you have a construction project we can help with?</h4>
       <button class="btn">Get a Quote Today</button>
     </section>
+
+    <!-- rivedere riutilizzabilità di services -->
+    <Services />
   </div>
 </template>
 
 <script>
 import Banner from "./Banner.vue";
+import Services from "./Services.vue";
 export default {
   name: "Main",
   components: {
     Banner,
+    Services,
   },
 };
 </script>
