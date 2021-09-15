@@ -1,6 +1,6 @@
 <template>
   <header class="d-flex align-items-center">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row h-100">
         <div class="col-6">
           <figure class="h-100 d-flex align-items-center">
@@ -11,10 +11,10 @@
             />
           </figure>
         </div>
-        <div class="col-6 d-flex align-items-center">
-          <nav class="d-flex align-items-center justify-content-center">
+        <div class="col-6 d-flex align-items-center justify-content-end">
+          <nav class="d-flex">
             <div class="d-flex align-items-center">
-              <ul class="d-flex align-items-center justify-content-between">
+              <ul class="d-flex align-items-center">
                 <li v-for="link in links" :key="link.id" class="mx-2">
                   <a :href="link.path">{{ link.title }}</a>
                 </li>
@@ -77,7 +77,7 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/vars";
 header {
-  height: 150px;
+  height: 100px;
   border: 1px solid black;
   width: 100%;
   figure {
