@@ -2,7 +2,10 @@
   <section id="services" :class="sectionType">
     <div class="container">
       <div class="col-12">
-        <div class="content p-5 d-flex flex-column align-items-center">
+        <div
+          :class="alternative"
+          class="content p-5 d-flex flex-column align-items-center"
+        >
           <h5>{{ title }}</h5>
           <div class="separator my-3"></div>
           <p class="w-75">
@@ -20,7 +23,7 @@
 <script>
 export default {
   name: "Services",
-  props: ["title", "text", "sectionType"],
+  props: ["title", "text", "sectionType", "alternative"],
 };
 </script>
 
@@ -39,8 +42,13 @@ export default {
   background-color: #f0ede6;
 }
 
-.testimonial {
+.testimonial,
+.light {
   color: #fff;
+}
+
+.align-left {
+  text-align: start;
 }
 </style>
 

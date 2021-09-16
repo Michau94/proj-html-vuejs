@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/vars";
 #home {
-  height: 100%;
+  height: 500px;
 }
 
 .background {
@@ -26,6 +26,12 @@ export default {
 
 .background2 {
   background-image: url("../assets/images/home-parallax-144609983.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.background3 {
+  background-image: url("../assets/images/about-call-to-action-57862405.jpg");
   background-size: cover;
   background-position: center;
 }

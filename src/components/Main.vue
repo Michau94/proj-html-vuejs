@@ -196,7 +196,7 @@
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?
             "
-      ><div class="d-flex justify-content-evenly">
+      ><div class="d-flex justify-content-evenly col-12">
         <Card
           cardType="post"
           title="Redeveloping Florida's Remote Southern Coast"
@@ -308,7 +308,25 @@
       </div>
     </Services>
 
-    <Home bg="background" />
+    <Home bg="background3">
+      <div class="d-flex align-items-center h-100">
+        <div class="col-8">
+          <Services
+            sectionType="light"
+            alternative="align-left"
+            title="Building Inspiring Spaces"
+            text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+              dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
+              facilis veritatis nostrum non repudiandae, ratione vero libero nihil
+              debitis?"
+          />
+        </div>
+        <div class="col-4">
+          <button class="btn my-3">Get a Free Quote Today</button>
+          <div class="text-light">Only takes a few seconds!</div>
+        </div>
+      </div>
+    </Home>
   </div>
 </template>
 
@@ -352,6 +370,10 @@ export default {
     transform: translate(50%);
     bottom: -20px;
   }
+}
+
+.btn {
+  background-color: $secondary;
 }
 
 figure {
