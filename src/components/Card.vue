@@ -81,4 +81,12 @@ export default {
   flex-basis: 20%;
   padding: 10px;
 }
+
+.post {
+  background-color: #fff;
+  flex-basis: 30%;
+  .description {
+    padding: 15px;
+  }
+}
 </style>

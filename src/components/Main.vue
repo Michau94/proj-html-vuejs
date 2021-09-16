@@ -31,7 +31,6 @@
         >
           <i class="far fa-building fa-2x m-3"></i>
         </Card>
-
         <Card
           cardType="alternative"
           title="Buildings"
@@ -94,82 +93,75 @@
           />
         </div>
       </div>
-
-      <!-- fare componente  -->
       <template v-slot:bottom>
-        <div class="d-flex justify-content-center align-items-center col-12">
-          <div class="line"></div>
-          <h5 class="px-5">View all projects</h5>
-          <div class="line"></div>
-        </div>
+        <Showmore text="View All Projects" />
       </template>
     </Services>
 
-    <section id="values">
-      <Services
-        sectionType="alternative"
-        title="Our Core Values"
-        text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+    <Services
+      sectionType="alternative"
+      title="Our Core Values"
+      text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
             dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?"
-      >
-        <div class="cards d-flex justify-content-evenly my-5">
-          <Card
-            cardType="standard"
-            title="Great Services"
-            text="Corporis consequatur dolorum similique
+    >
+      <div class="cards d-flex justify-content-evenly my-5">
+        <Card
+          cardType="standard"
+          title="Great Services"
+          text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
-          >
-            <div class="icon"><i class="fas fa-home fa-3x"></i></div>
-            <template v-slot:middle>
-              <div class="d-flex justify-content-center">
-                <hr class="w-25" />
-              </div>
-            </template>
-          </Card>
-          <Card
-            cardType="standard"
-            title="Great Services"
-            text="Corporis consequatur dolorum similique
+        >
+          <div class="icon"><i class="fas fa-home fa-3x"></i></div>
+          <template v-slot:middle>
+            <div class="d-flex justify-content-center">
+              <hr class="w-25" />
+            </div>
+          </template>
+        </Card>
+        <Card
+          cardType="standard"
+          title="Great Services"
+          text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
-          >
-            <span class="icon"><i class="fas fa-home fa-3x"></i></span>
-            <template v-slot:middle>
-              <div class="d-flex justify-content-center">
-                <hr class="w-25" />
-              </div>
-            </template>
-          </Card>
-          <Card
-            cardType="standard"
-            title="Great Services"
-            text="Corporis consequatur dolorum similique
+        >
+          <span class="icon"><i class="fas fa-home fa-3x"></i></span>
+          <template v-slot:middle>
+            <div class="d-flex justify-content-center">
+              <hr class="w-25" />
+            </div>
+          </template>
+        </Card>
+        <Card
+          cardType="standard"
+          title="Great Services"
+          text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
-          >
-            <span class="icon"><i class="fas fa-home fa-3x"></i></span>
-            <template v-slot:middle>
-              <div class="d-flex justify-content-center">
-                <hr class="w-25" />
-              </div>
-            </template>
-          </Card>
-          <Card
-            cardType="standard"
-            title="Great Services"
-            text="Corporis consequatur dolorum similique
+        >
+          <span class="icon"><i class="fas fa-home fa-3x"></i></span>
+          <template v-slot:middle>
+            <div class="d-flex justify-content-center">
+              <hr class="w-25" />
+            </div>
+          </template>
+        </Card>
+        <Card
+          cardType="standard"
+          title="Great Services"
+          text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
-          >
-            <span class="icon"><i class="fas fa-home fa-3x"></i></span>
-            <template v-slot:middle>
-              <div class="d-flex justify-content-center">
-                <hr class="w-25" />
-              </div>
-            </template>
-          </Card>
-        </div>
-      </Services>
-    </section>
+        >
+          <span class="icon"><i class="fas fa-home fa-3x"></i></span>
+          <template v-slot:middle>
+            <div class="d-flex justify-content-center">
+              <hr class="w-25" />
+            </div>
+          </template>
+        </Card>
+      </div>
+    </Services>
+
     <Home bg="background2">
       <Services title="Our Home Owners Say" sectionType="testimonial">
         <figure class="col-2">
@@ -195,6 +187,128 @@
         </template>
       </Services>
     </Home>
+
+    <Services
+      sectionType="alternative"
+      title="Latest News"
+      text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+            dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
+            facilis veritatis nostrum non repudiandae, ratione vero libero nihil
+            debitis?
+            "
+      ><div class="d-flex justify-content-evenly">
+        <Card
+          cardType="post"
+          title="Redeveloping Florida's Remote Southern Coast"
+          text="Corporis consequatur dolorum similique
+              facilis veritatis nostrum non repudiandae, ratione vero libero
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+            dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
+            facilis veritatis nostrum non repudiandae, ratione vero libero nihil
+            debitis?"
+        >
+          <img
+            src="../assets/images/blog-post-134132600-400x241.jpg"
+            alt="post-1"
+          />
+          <template v-slot:middle>
+            <Separator>
+              <date> December 3</date>
+            </Separator>
+          </template>
+        </Card>
+        <Card
+          cardType="post"
+          title="Redeveloping Florida's Remote Southern Coast"
+          text="Corporis consequatur dolorum similique
+              facilis veritatis nostrum non repudiandae, ratione vero libero
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+            dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
+            facilis veritatis nostrum non repudiandae, ratione vero libero nihil
+            debitis?"
+        >
+          <img
+            src="../assets/images/blog-post-134132600-400x241.jpg"
+            alt="post-1"
+          />
+          <template v-slot:middle>
+            <Separator>
+              <date> December 3</date>
+            </Separator>
+          </template>
+        </Card>
+        <Card
+          cardType="post"
+          title="Redeveloping Florida's Remote Southern Coast"
+          text="Corporis consequatur dolorum similique
+              facilis veritatis nostrum non repudiandae, ratione vero libero
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+            dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
+            facilis veritatis nostrum non repudiandae, ratione vero libero nihil
+            debitis?"
+        >
+          <img
+            src="../assets/images/blog-post-134132600-400x241.jpg"
+            alt="post-1"
+          />
+          <template v-slot:middle>
+            <Separator>
+              <date> December 3</date>
+            </Separator>
+          </template>
+        </Card>
+      </div>
+      <template v-slot:bottom>
+        <Showmore text="Show More Articles" />
+      </template>
+    </Services>
+
+    <Services
+      title="Trusted Partners"
+      text=" Corporis consequatur dolorum similique
+            facilis veritatis nostrum non repudiandae, ratione vero libero nihil
+            debitis?"
+    >
+      <div class="d-flex justify-content-evenly col-12">
+        <figure class="col-2">
+          <img
+            class="h-50"
+            src="../assets/images/home-logo11-219096700-320x202.png"
+            alt=""
+          />
+        </figure>
+        <figure class="col-2">
+          <img
+            class="h-50"
+            src="../assets/images/home-logo10-219096700-320x202.png"
+            alt=""
+          />
+        </figure>
+        <figure class="col-2">
+          <img
+            class="h-50"
+            src="../assets/images/home-logo1-219096700-320x202.png"
+            alt=""
+          />
+        </figure>
+        <figure class="col-2">
+          <img
+            class="h-50"
+            src="../assets/images/home-logo2-219096700-320x202.png"
+            alt=""
+          />
+        </figure>
+        <figure class="col-2">
+          <img
+            class="h-50"
+            src="../assets/images/home-logo9-219096700-320x202.png"
+            alt=""
+          />
+        </figure>
+      </div>
+    </Services>
+
+    <Home bg="background" />
   </div>
 </template>
 
@@ -203,6 +317,8 @@ import Banner from "./Banner.vue";
 import Services from "./Services.vue";
 import Home from "./Home.vue";
 import Card from "./Card.vue";
+import Separator from "./Separator.vue";
+import Showmore from "./Showmore.vue";
 
 export default {
   name: "Main",
@@ -211,6 +327,8 @@ export default {
     Services,
     Home,
     Card,
+    Separator,
+    Showmore,
   },
 };
 </script>
@@ -234,12 +352,6 @@ export default {
     transform: translate(50%);
     bottom: -20px;
   }
-}
-
-.line {
-  height: 1px;
-  width: 25%;
-  background-color: grey;
 }
 
 figure {

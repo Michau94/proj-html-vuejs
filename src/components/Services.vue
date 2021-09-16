@@ -1,14 +1,16 @@
 <template>
-  <section id="services" class="py-4" :class="sectionType">
-    <div class="col-12">
-      <div class="content p-3 d-flex flex-column align-items-center">
-        <h5>{{ title }}</h5>
-        <div class="separator my-3"></div>
-        <p class="w-75">
-          {{ text }}
-        </p>
-        <slot></slot>
-        <slot name="middle"></slot>
+  <section id="services" :class="sectionType">
+    <div class="container">
+      <div class="col-12">
+        <div class="content p-5 d-flex flex-column align-items-center">
+          <h5>{{ title }}</h5>
+          <div class="separator my-3"></div>
+          <p class="w-75">
+            {{ text }}
+          </p>
+          <slot></slot>
+          <slot name="middle"></slot>
+        </div>
       </div>
     </div>
     <slot name="bottom"></slot>
