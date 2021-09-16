@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="wrapper h-100 d-flex align-items-center">
+    <div class="wrapper h-100 d-flex align-items-center py-3">
       <div class="container">
         <div class="row">
           <div id="about" class="col-3">
@@ -14,14 +14,12 @@
                 cupiditate tempora, quaerat minima alias id, animi optio,
                 deleniti et vel fuga eos.
               </p>
-              <button class="btn my-3 text-light btn-warning">
-                Get a Free Quote Today
-              </button>
+              <Button text="Get a Free Quote Today!" />
             </div>
           </div>
           <div id="social" class="col-3">
             <div class="content mx-3">
-              <h4 class="text-bold text-warning text-start">Last Tweets</h4>
+              <h4 class="text-bold text-start">Last Tweets</h4>
               <div class="d-flex justify-content-between">
                 <div class="d-flex text-light">
                   <figure
@@ -65,9 +63,7 @@
           </div>
           <div id="contact" class="col-3">
             <div class="content mx-3">
-              <h4 class="text-bold text-warning text-start">
-                Contact Us Today
-              </h4>
+              <h4 class="text-bold text-start">Contact Us Today</h4>
               <ul class="w-100">
                 <li>
                   <i class="fas fa-globe"></i>Corporate Location 1600
@@ -92,7 +88,7 @@
             </div>
           </div>
           <div class="col-3">
-            <h4 class="text-bold text-warning text-start">Find us</h4>
+            <h4 class="text-bold text-start">Find us</h4>
 
             <figure>
               <img
@@ -109,8 +105,12 @@
 </template>
 
 <script>
+import Button from "./Button.vue";
 export default {
   name: "Footer",
+  components: {
+    Button,
+  },
 };
 </script>
 
@@ -119,7 +119,10 @@ export default {
 
 footer {
   background-color: $primary-text;
-  height: 500px;
+  h4 {
+    color: $secondary;
+  }
+
   color: $explore-btn;
   #contact {
     ul {

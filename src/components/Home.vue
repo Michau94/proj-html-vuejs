@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../scss/vars";
-#home {
+section {
   height: 500px;
 }
 
@@ -33,6 +33,7 @@ export default {
 .background3 {
   background-image: url("../assets/images/about-call-to-action-57862405.jpg");
   background-size: cover;
-  background-position: center;
+  background-position-y: 70%;
+  height: 350px;
 }
 </style>

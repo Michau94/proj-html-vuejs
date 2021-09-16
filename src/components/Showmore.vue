@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-flex justify-content-center align-items-center col-12">
+    <div class="d-flex justify-content-center align-items-center col-12 py-5">
       <div class="line"></div>
       <h5 class="px-5">{{ text }}</h5>
       <div class="line"></div>

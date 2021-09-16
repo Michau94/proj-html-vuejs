@@ -22,9 +22,7 @@
             </div>
 
             <div>
-              <button type="button" class="mx-2 btn btn-warning">
-                Get Quote
-              </button>
+              <Button text="Get Quote" buttonType="basic" />
             </div>
           </nav>
         </div>
@@ -36,8 +34,10 @@
 
 
 <script>
+import Button from "./Button.vue";
 export default {
   name: "Header",
+  components: { Button },
   data() {
     return {
       links: [

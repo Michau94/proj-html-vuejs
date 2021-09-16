@@ -14,16 +14,20 @@
         We build inspiring Residential & Commericial Spaces
       </h5>
       <div>
-        <button id="explore" class="btn">Explore Recent Work</button>
-        <button id="quote" class="btn">Get a Quote Today</button>
+        <Button text="Explore Recent Work" buttonType="alternative" />
+        <Button text="Get a Quote Today" buttonType="basic" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Button from "./Button.vue";
 export default {
   name: "Banner",
+  components: {
+    Button,
+  },
 };
 </script>
 
@@ -45,14 +49,6 @@ export default {
 
   .btn {
     margin: 0 10px;
-  }
-  #explore {
-    background-color: $explore-btn;
-    color: white;
-  }
-
-  #quote {
-    background-color: $secondary;
   }
 }
 </style>

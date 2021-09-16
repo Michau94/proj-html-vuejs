@@ -1,74 +1,88 @@
 <template>
   <div>
+    <!-- jumbo -->
     <Banner />
 
     <section class="question d-flex justify-content-center align-items-center">
       <h4>Do you have a construction project we can help with?</h4>
-      <button class="btn">Get a Quote Today</button>
+      <Button text="Get a Quote Today" buttonType="light" />
     </section>
 
+    <!-- cards -->
     <Services
       title="Specialists in modern construction"
       text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
-          dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
-          facilis veritatis nostrum non repudiandae, ratione vero libero nihil
-          debitis?"
+            dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
+            "
     >
       <div class="cards d-flex justify-content-evenly my-5">
         <Card
           cardType="alternative"
           title="Buildings"
           text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
-              mollitia culpa harum ullam labore,"
+                "
         >
-          <i class="far fa-building fa-2x m-3"></i>
+          <template v-slot:hover>
+            <div class="w-100 h-100 overflow-auto cardHover">
+              <div
+                class="text-light d-flex flex-column align-items-center w-100"
+              >
+                <div class="text-dark">
+                  <h6 class="my-4">Artfully Crafted</h6>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                  <Button text="Get a Quote" buttonType="light" />
+                </div>
+              </div>
+            </div>
+          </template>
+          <div class="icon"><i class="far fa-building fa-2x m-3"></i></div>
         </Card>
         <Card
           cardType="alternative"
-          title="Buildings"
+          title="Renovate"
           text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
-              mollitia culpa harum ullam labore,"
+                "
         >
-          <i class="far fa-building fa-2x m-3"></i>
+          <div class="icon"><i class="fas fa-sync-alt fa-2x m-3"></i></div>
         </Card>
         <Card
           cardType="alternative"
-          title="Buildings"
+          title="Construct"
           text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
-              mollitia culpa harum ullam labore,"
+                "
         >
-          <i class="far fa-building fa-2x m-3"></i>
+          <div class="icon"><i class="fas fa-home fa-2x m-3"></i></div>
         </Card>
         <Card
           cardType="alternative"
-          title="Buildings"
+          title="Exclusive"
           text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
-              mollitia culpa harum ullam labore,"
+                "
         >
-          <i class="far fa-building fa-2x m-3"></i>
+          <div class="icon"><i class="fas fa-truck fa-2x m-3"></i></div>
         </Card>
       </div>
     </Services>
 
-    <div class="upper-wave"></div>
-
+    <!-- hammer banner  -->
     <Home bg="background">
       <div class="cards h-100 d-flex justify-content-evenly align-items-center">
         <Card title="147" text="Buildings" cardType="basic">
           <i class="fas fa-suitcase fa-5x"></i>
         </Card>
-        <Card title="147" text="Buildings" cardType="basic">
-          <i class="fas fa-suitcase fa-5x"></i>
+        <Card title="896" text="Completed Projects" cardType="basic">
+          <i class="far fa-building fa-5x"></i>
         </Card>
-        <Card title="147" text="Buildings" cardType="basic">
-          <i class="fas fa-suitcase fa-5x"></i>
+        <Card title="172" text="Trained Professionals" cardType="basic">
+          <i class="fas fa-users fa-5x"></i>
         </Card>
-        <Card title="147" text="Buildings" cardType="basic">
-          <i class="fas fa-suitcase fa-5x"></i>
+        <Card title="19" text="International Offices" cardType="basic">
+          <i class="fas fa-globe fa-5x"></i>
         </Card>
       </div>
     </Home>
 
+    <!-- recent work  -->
     <Services
       title="Explore Recent Work"
       text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet dicta ipsam beatae earum aut. Corporis consequatur dolorum similique facilis veritatis nostrum non"
@@ -98,6 +112,7 @@
       </template>
     </Services>
 
+    <!-- core values -->
     <Services
       sectionType="alternative"
       title="Our Core Values"
@@ -113,7 +128,7 @@
           text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
         >
-          <div class="icon"><i class="fas fa-home fa-3x"></i></div>
+          <div class="icons"><i class="first fas fa-home fa-3x"></i></div>
           <template v-slot:middle>
             <div class="d-flex justify-content-center">
               <hr class="w-25" />
@@ -122,11 +137,11 @@
         </Card>
         <Card
           cardType="standard"
-          title="Great Services"
+          title="Highest Standards"
           text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
         >
-          <span class="icon"><i class="fas fa-home fa-3x"></i></span>
+          <span class="icons"><i class="second fas fa-cog fa-3x"></i></span>
           <template v-slot:middle>
             <div class="d-flex justify-content-center">
               <hr class="w-25" />
@@ -135,11 +150,11 @@
         </Card>
         <Card
           cardType="standard"
-          title="Great Services"
+          title="Professional Team"
           text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
         >
-          <span class="icon"><i class="fas fa-home fa-3x"></i></span>
+          <span class="icons"><i class="fas third fa-users fa-3x"></i></span>
           <template v-slot:middle>
             <div class="d-flex justify-content-center">
               <hr class="w-25" />
@@ -148,11 +163,13 @@
         </Card>
         <Card
           cardType="standard"
-          title="Great Services"
+          title="Creative Solutions"
           text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
         >
-          <span class="icon"><i class="fas fa-home fa-3x"></i></span>
+          <span class="icons"
+            ><i class="fourth fas fa-lightbulb fa-3x"></i
+          ></span>
           <template v-slot:middle>
             <div class="d-flex justify-content-center">
               <hr class="w-25" />
@@ -162,6 +179,7 @@
       </div>
     </Services>
 
+    <!-- testimonials -->
     <Home bg="background2">
       <Services title="Our Home Owners Say" sectionType="testimonial">
         <figure class="col-2">
@@ -188,6 +206,7 @@
       </Services>
     </Home>
 
+    <!-- latest news -->
     <Services
       sectionType="alternative"
       title="Latest News"
@@ -219,7 +238,7 @@
         </Card>
         <Card
           cardType="post"
-          title="Redeveloping Florida's Remote Southern Coast"
+          title="How We Manage Large Construction Projects"
           text="Corporis consequatur dolorum similique
               facilis veritatis nostrum non repudiandae, ratione vero libero
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
@@ -228,7 +247,7 @@
             debitis?"
         >
           <img
-            src="../assets/images/blog-post-134132600-400x241.jpg"
+            src="../assets/images/blog-post-92486644-400x241.jpg"
             alt="post-1"
           />
           <template v-slot:middle>
@@ -239,7 +258,7 @@
         </Card>
         <Card
           cardType="post"
-          title="Redeveloping Florida's Remote Southern Coast"
+          title="Future proofing a modern home"
           text="Corporis consequatur dolorum similique
               facilis veritatis nostrum non repudiandae, ratione vero libero
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
@@ -248,7 +267,7 @@
             debitis?"
         >
           <img
-            src="../assets/images/blog-post-134132600-400x241.jpg"
+            src="../assets/images/blog-post-332773904-400x241.jpg"
             alt="post-1"
           />
           <template v-slot:middle>
@@ -259,7 +278,7 @@
         </Card>
       </div>
       <template v-slot:bottom>
-        <Showmore text="Show More Articles" />
+        <Showmore text="View More Articles" />
       </template>
     </Services>
 
@@ -322,7 +341,7 @@
           />
         </div>
         <div class="col-4">
-          <button class="btn my-3">Get a Free Quote Today</button>
+          <Button buttonType="basic" text="Get a Free Quote Today!" />
           <div class="text-light">Only takes a few seconds!</div>
         </div>
       </div>
@@ -337,6 +356,7 @@ import Home from "./Home.vue";
 import Card from "./Card.vue";
 import Separator from "./Separator.vue";
 import Showmore from "./Showmore.vue";
+import Button from "./Button.vue";
 
 export default {
   name: "Main",
@@ -347,12 +367,14 @@ export default {
     Card,
     Separator,
     Showmore,
+    Button,
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../scss/vars";
+@import "../scss/main";
 
 .question {
   height: 100px;
@@ -363,20 +385,10 @@ export default {
     text-transform: capitalize;
   }
   button {
-    background-color: $explore-btn;
-    color: #fff;
     position: absolute;
     right: 50%;
     transform: translate(50%);
     bottom: -20px;
   }
-}
-
-.btn {
-  background-color: $secondary;
-}
-
-figure {
-  margin: 0;
 }
 </style>
