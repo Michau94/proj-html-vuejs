@@ -213,7 +213,7 @@
           />
           <template v-slot:middle>
             <Separator>
-              <date> December 3</date>
+              <time> December 3</time>
             </Separator>
           </template>
         </Card>
@@ -233,7 +233,7 @@
           />
           <template v-slot:middle>
             <Separator>
-              <date> December 3</date>
+              <time> December 3</time>
             </Separator>
           </template>
         </Card>
@@ -253,7 +253,7 @@
           />
           <template v-slot:middle>
             <Separator>
-              <date> December 3</date>
+              <time> December 3</time>
             </Separator>
           </template>
         </Card>
