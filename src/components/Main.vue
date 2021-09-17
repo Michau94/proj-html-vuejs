@@ -6,7 +6,7 @@
     <Slogan />
 
     <!-- cards -->
-    <section id="Specialist">
+    <section id="specialist">
       <Heading
         title="Specialists in modern construction"
         text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet

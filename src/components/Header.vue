@@ -15,11 +15,18 @@
           <nav class="d-flex">
             <ul class="d-flex align-items-center">
               <li
-                v-for="link in links"
+                v-for="(link, index) in links"
                 :key="link.id"
                 class="mx-4 d-flex align-items-center"
+                @click="currentLink(index)"
               >
-                <a :href="link.path">{{ link.title }}</a>
+                <a :class="{ active: link.selected }" :href="link.path">{{
+                  link.title
+                }}</a>
+                <span
+                  class="arrow-down"
+                  :class="{ active: link.selected }"
+                ></span>
               </li>
             </ul>
             <div class="d-flex align-items-center">
@@ -46,29 +53,41 @@ export default {
           id: 1,
           title: "Home",
           path: "#",
+          selected: true,
         },
         {
           id: 2,
           title: "About",
           path: "#",
+          selected: false,
         },
         {
           id: 3,
           title: "Services",
           path: "#",
+          selected: false,
         },
         {
           id: 4,
           title: "Work",
           path: "#",
+          selected: false,
         },
         {
           id: 5,
           title: "Articles",
           path: "#",
+          selected: false,
         },
       ],
     };
+  },
+  methods: {
+    currentLink(idx) {
+      this.links.forEach((el, ind) => {
+        ind == idx ? (el.selected = true) : (el.selected = false);
+      });
+    },
   },
 };
 </script>
@@ -93,16 +112,37 @@ nav {
       text-transform: uppercase;
       font-weight: 200;
       height: 100px;
-    }
-
-    a {
-      text-decoration: none;
-      color: $primary-text;
+      position: relative;
+      a {
+        text-decoration: none;
+        color: $primary-text;
+        &:hover {
+          color: $secondary;
+        }
+      }
     }
   }
 
   div {
     width: 120px;
   }
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+}
+
+.active {
+  color: $secondary;
+  opacity: 1;
 }
 </style>

@@ -4,7 +4,7 @@
     <div class="title">{{ title }}</div>
     <div class="description">{{ text }}</div>
     <div class="content">
-      <slot name="hover"></slot>
+      <slot></slot>
     </div>
   </div>
 </template>
