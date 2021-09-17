@@ -8,29 +8,29 @@ figure {
 
 .first {
   background-color: $card-first;
-  color: #fff;
+  color: $secondary;
 }
 
 .second {
   background-color: $card-second;
-  color: #fff;
+  color: $secondary;
 }
 
 .third {
   background-color: $card-third;
-  color: #fff;
+  color: $secondary;
 }
 
 .fourth {
   background-color: $card-fourth;
-  color: #fff;
+  color: $secondary;
 }
 
-// sections effects
+// banner effect (A try)!
 
 #values,
 #news {
-  background-color: lightgray;
+  background-color: $card-back;
 }
 
 #values {

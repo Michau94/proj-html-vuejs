@@ -1,6 +1,6 @@
 <template>
   <header class="d-flex align-items-center">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row h-100">
         <div class="col-6">
           <figure class="h-100 d-flex align-items-center">

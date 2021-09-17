@@ -38,6 +38,6 @@ export default {
 
 .light {
   color: #fff;
-  align-items: flex-start;
+  text-align: flex-start;
 }
 </style>

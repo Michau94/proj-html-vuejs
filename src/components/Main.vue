@@ -3,7 +3,8 @@
     <!-- jumbo -->
     <Banner />
 
-    <Slogan />
+    <!-- box slogan riutilizzabile -->
+    <Slogan text="Do you have a construction project we can help with?" />
 
     <!-- cards -->
     <section id="specialist">
@@ -13,7 +14,7 @@
             dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
             "
       />
-      <div class="cards d-flex justify-content-evenly py-5">
+      <div class="cards d-flex justify-content-evenly py-5 container">
         <Card
           v-for="card in specialistData"
           :key="card.id"
@@ -55,7 +56,9 @@
         title="Explore Recent Work"
         text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet dicta ipsam beatae earum aut. Corporis consequatur dolorum similique facilis veritatis nostrum non"
       />
-      <div class="d-flex align-items-center justify-content-evenly col-12">
+      <div
+        class="d-flex align-items-center justify-content-evenly col-6 container"
+      >
         <ProjectCard prj="prj1" />
         <ProjectCard prj="prj2" />
         <ProjectCard prj="prj3" />
@@ -72,7 +75,7 @@
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?"
       />
-      <div class="cards d-flex justify-content-evenly py-5">
+      <div class="cards d-flex justify-content-evenly py-5 container">
         <ValuesCard
           v-for="card in valuesData"
           :key="card.id"
@@ -112,7 +115,7 @@
     </section>
 
     <!-- latest news -->
-    <section id="news" sectionType="alternative">
+    <section id="news">
       <Heading
         title="Latest News"
         text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
@@ -121,7 +124,7 @@
             debitis?
             "
       />
-      <div class="d-flex justify-content-evenly col-12">
+      <div class="d-flex justify-content-evenly col-12 container">
         <News
           title="Redeveloping Florida's Remote Southern Coast"
           text="Corporis consequatur dolorum similique
@@ -131,10 +134,13 @@
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?"
         >
-          <img
-            src="../assets/images/blog-post-134132600-400x241.jpg"
-            alt="post-1"
-          />
+          <div>
+            <img
+              src="../assets/images/blog-post-134132600-400x241.jpg"
+              class="img-fluid"
+              alt="post-1"
+            />
+          </div>
         </News>
         <News
           title="How We Manage Large Construction Projects"
@@ -145,10 +151,13 @@
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?"
         >
-          <img
-            src="../assets/images/blog-post-92486644-400x241.jpg"
-            alt="post-1"
-          />
+          <div>
+            <img
+              src="../assets/images/blog-post-92486644-400x241.jpg"
+              alt="post-1"
+              class="img-fluid"
+            />
+          </div>
         </News>
         <News
           title="Future proofing a modern home"
@@ -159,10 +168,13 @@
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?"
         >
-          <img
-            src="../assets/images/blog-post-332773904-400x241.jpg"
-            alt="post-1"
-          />
+          <div>
+            <img
+              class="img-fluid"
+              src="../assets/images/blog-post-332773904-400x241.jpg"
+              alt="post-1"
+            />
+          </div>
         </News>
       </div>
       <Showmore text="View More Articles" />
@@ -171,12 +183,13 @@
     <!-- partners -->
     <section id="partners">
       <Heading
+        mod="light"
         title="Trusted Partners"
         text=" Corporis consequatur dolorum similique
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?"
       />
-      <div class="d-flex justify-content-evenly col-12">
+      <div class="d-flex justify-content-evenly col-12 container">
         <figure class="col-2">
           <img
             class="h-50"

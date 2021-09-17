@@ -1,6 +1,6 @@
 <template>
   <section class="question d-flex justify-content-center align-items-center">
-    <h4>Do you have a construction project we can help with?</h4>
+    <h4>{{ text }}</h4>
     <Button text="Get a Quote Today" buttonType="light" />
   </section>
 </template>
@@ -9,6 +9,7 @@
 import Button from "./Button.vue";
 export default {
   name: "Slogan",
+  props: ["text"],
   components: {
     Button,
   },
