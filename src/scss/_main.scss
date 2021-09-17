@@ -25,3 +25,43 @@ figure {
   background-color: $card-fourth;
   color: #fff;
 }
+
+// sections effects
+
+#values,
+#news {
+  background-color: lightgray;
+}
+
+#values {
+  position: relative;
+  bottom: -30px;
+}
+
+#values {
+  border-bottom-left-radius: 20% 5%;
+  border-bottom-right-radius: 20% 5%;
+}
+
+#news {
+  border-top-left-radius: 20% 5%;
+  border-top-right-radius: 20% 5%;
+  position: relative;
+  top: -38px;
+}
+
+#specialist {
+  border-bottom-left-radius: 20% 5%;
+  border-bottom-right-radius: 20% 5%;
+  background-color: #fff;
+  position: relative;
+  bottom: -25px;
+}
+
+#projects {
+  border-top-left-radius: 20% 5%;
+  border-top-right-radius: 20% 5%;
+  background-color: #fff;
+  position: relative;
+  top: -20px;
+}

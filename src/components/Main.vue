@@ -13,7 +13,7 @@
             dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
             "
       />
-      <div class="cards d-flex justify-content-evenly my-3">
+      <div class="cards d-flex justify-content-evenly py-5">
         <Card
           v-for="card in specialistData"
           :key="card.id"
@@ -22,12 +22,21 @@
           :text="card.text"
           :icon="card.icon"
         >
+          <div class="w-100 h-100 overflow-auto cardHover">
+            <div class="text-light d-flex flex-column align-items-center w-100">
+              <div class="text-dark">
+                <h6 class="my-4">Artfully Crafted</h6>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                <Button text="Get a Quote" buttonType="light" />
+              </div>
+            </div>
+          </div>
         </Card>
       </div>
     </section>
 
     <!-- hammer banner  -->
-    <section class="background">
+    <section id="banner" class="background">
       <div class="cards h-100 d-flex justify-content-evenly align-items-center">
         <Card
           v-for="card in bannerData"
@@ -63,7 +72,7 @@
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?"
       />
-      <div class="cards d-flex justify-content-evenly my-5">
+      <div class="cards d-flex justify-content-evenly py-5">
         <ValuesCard
           v-for="card in valuesData"
           :key="card.id"
@@ -77,7 +86,7 @@
     <!-- testimonials -->
     <section
       id="testimonial"
-      class="background2 text-light d-flex flex-column align-items-center"
+      class="background2 text-light d-flex flex-column align-items-center pt-3"
     >
       <Heading title="Our Home Owners Say" />
       <figure>
@@ -96,7 +105,7 @@
       </p>
 
       <h6 class="text-uppercase">Harry Smith - New Home Owner</h6>
-      <div class="slider p-3">
+      <div class="slider p-3 m-5">
         <i class="fas fa-circle px-1"></i>
         <i class="far fa-circle"></i>
       </div>
@@ -279,12 +288,13 @@ export default {
   background-image: url("../assets/images/home-244125289.jpg");
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
 }
 .background2 {
   background-image: url("../assets/images/home-parallax-144609983.jpg");
   background-size: cover;
   background-position: center;
+  height: 620px;
 }
 
 .background3 {
