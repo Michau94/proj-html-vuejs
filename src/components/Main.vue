@@ -15,57 +15,30 @@
       />
       <div class="cards d-flex justify-content-evenly my-3">
         <Card
+          v-for="card in specialistData"
+          :key="card.id"
           cardType="alternative"
-          title="Buildings"
-          text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
-                "
+          :title="card.title"
+          :text="card.text"
+          :icon="card.icon"
         >
-          <div class="icon"><i class="fas fa-building fa-2x m-3"></i></div>
-        </Card>
-        <Card
-          cardType="alternative"
-          title="Renovate"
-          text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
-                "
-        >
-          <div class="icon"><i class="fas fa-sync-alt fa-2x m-3"></i></div>
-        </Card>
-        <Card
-          cardType="alternative"
-          title="Construct"
-          text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
-                "
-        >
-          <div class="icon"><i class="fas fa-home fa-2x m-3"></i></div>
-        </Card>
-        <Card
-          cardType="alternative"
-          title="Exclusive"
-          text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
-                "
-        >
-          <div class="icon"><i class="fas fa-truck fa-2x m-3"></i></div>
         </Card>
       </div>
     </section>
 
     <!-- hammer banner  -->
-    <Home bg="background">
+    <section class="background">
       <div class="cards h-100 d-flex justify-content-evenly align-items-center">
-        <Card title="147" text="Buildings" cardType="basic">
-          <i class="fas fa-suitcase fa-5x"></i>
-        </Card>
-        <Card title="896" text="Completed Projects" cardType="basic">
-          <i class="far fa-building fa-5x"></i>
-        </Card>
-        <Card title="172" text="Trained Professionals" cardType="basic">
-          <i class="fas fa-users fa-5x"></i>
-        </Card>
-        <Card title="19" text="International Offices" cardType="basic">
-          <i class="fas fa-globe fa-5x"></i>
-        </Card>
+        <Card
+          v-for="card in bannerData"
+          :key="card.id"
+          :title="card.title"
+          :text="card.text"
+          cardType="basic"
+          :icon="card.icon"
+        />
       </div>
-    </Home>
+    </section>
 
     <!-- recent work  -->
     <section id="projects">
@@ -92,29 +65,11 @@
       />
       <div class="cards d-flex justify-content-evenly my-5">
         <ValuesCard
-          title="Great Services"
-          text="Corporis consequatur dolorum similique
-            facilis veritatis nostrum"
-          icon="first fas fa-home fa-3x"
-        />
-        <ValuesCard
-          title="Highest Standards"
-          text="Corporis consequatur dolorum similique
-            facilis veritatis nostrum"
-          icon="second fas fa-cog fa-3x"
-        />
-
-        <ValuesCard
-          title="Professional Team"
-          text="Corporis consequatur dolorum similique
-            facilis veritatis nostrum"
-          icon="fas third fa-users fa-3x"
-        />
-        <ValuesCard
-          title="Creative Solutions"
-          text="Corporis consequatur dolorum similique
-            facilis veritatis nostrum"
-          icon="fourth fas fa-lightbulb fa-3x"
+          v-for="card in valuesData"
+          :key="card.id"
+          :title="card.title"
+          :text="card.text"
+          :icon="card.icon"
         />
       </div>
     </section>
@@ -281,14 +236,18 @@
 import Banner from "./Banner.vue";
 import Slogan from "./Slogan.vue";
 import Heading from "./Heading.vue";
-import Home from "./Home.vue";
 import Card from "./Card.vue";
 import ProjectCard from "./ProjectCard.vue";
 import ValuesCard from "./ValuesCard.vue";
 import News from "./News.vue";
-
 import Showmore from "./Showmore.vue";
 import Button from "./Button.vue";
+
+// dataimport
+
+import specialistData from "../data/specialistData.js";
+import bannerData from "../data/bannerData.js";
+import valuesData from "../data/valuesData.js";
 
 export default {
   name: "Main",
@@ -299,22 +258,28 @@ export default {
     ProjectCard,
     ValuesCard,
     News,
-    Home,
     Card,
     Showmore,
     Button,
+  },
+  data() {
+    return {
+      specialistData,
+      bannerData,
+      valuesData,
+    };
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../scss/vars";
-@import "../scss/_main";
-
+@import "../scss/main";
 .background {
   background-image: url("../assets/images/home-244125289.jpg");
   background-size: cover;
   background-position: center;
+  height: 300px;
 }
 .background2 {
   background-image: url("../assets/images/home-parallax-144609983.jpg");

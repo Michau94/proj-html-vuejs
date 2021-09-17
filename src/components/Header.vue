@@ -91,7 +91,7 @@ nav {
     margin: 0;
     li {
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 200;
       height: 100px;
     }
 

@@ -29,5 +29,9 @@ export default {
     font-size: 1.2rem;
     font-weight: 500;
   }
+
+  .description {
+    padding: 10px;
+  }
 }
 </style>

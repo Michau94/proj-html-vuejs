@@ -1,10 +1,8 @@
 <template>
   <div class="card d-flex wrapper" :class="cardType">
-    <slot></slot>
+    <div class="icon"><i :class="icon"></i></div>
     <div class="title">{{ title }}</div>
-    <slot name="middle"></slot>
     <div class="description">{{ text }}</div>
-    <slot name="bottom"></slot>
     <div class="content">
       <slot name="hover"></slot>
     </div>
@@ -14,7 +12,7 @@
 <script>
 export default {
   name: "Card",
-  props: ["title", "text", "cardType"],
+  props: ["title", "text", "cardType", "icon"],
 };
 </script>
 
