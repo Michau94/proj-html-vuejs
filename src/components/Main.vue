@@ -3,39 +3,24 @@
     <!-- jumbo -->
     <Banner />
 
-    <section class="question d-flex justify-content-center align-items-center">
-      <h4>Do you have a construction project we can help with?</h4>
-      <Button text="Get a Quote Today" buttonType="light" />
-    </section>
+    <Slogan />
 
     <!-- cards -->
-    <Services
-      title="Specialists in modern construction"
-      text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+    <section id="Specialist">
+      <Heading
+        title="Specialists in modern construction"
+        text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
             dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
             "
-    >
-      <div class="cards d-flex justify-content-evenly my-5">
+      />
+      <div class="cards d-flex justify-content-evenly my-3">
         <Card
           cardType="alternative"
           title="Buildings"
           text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
                 "
         >
-          <template v-slot:hover>
-            <div class="w-100 h-100 overflow-auto cardHover">
-              <div
-                class="text-light d-flex flex-column align-items-center w-100"
-              >
-                <div class="text-dark">
-                  <h6 class="my-4">Artfully Crafted</h6>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
-                  <Button text="Get a Quote" buttonType="light" />
-                </div>
-              </div>
-            </div>
-          </template>
-          <div class="icon"><i class="far fa-building fa-2x m-3"></i></div>
+          <div class="icon"><i class="fas fa-building fa-2x m-3"></i></div>
         </Card>
         <Card
           cardType="alternative"
@@ -62,7 +47,7 @@
           <div class="icon"><i class="fas fa-truck fa-2x m-3"></i></div>
         </Card>
       </div>
-    </Services>
+    </section>
 
     <!-- hammer banner  -->
     <Home bg="background">
@@ -83,141 +68,97 @@
     </Home>
 
     <!-- recent work  -->
-    <Services
-      title="Explore Recent Work"
-      text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet dicta ipsam beatae earum aut. Corporis consequatur dolorum similique facilis veritatis nostrum non"
-    >
-      <div class="d-flex align-items-center justify-content-evenly col-7">
-        <div>
-          <img
-            src="../assets/images/project1-featured-294276386-200x200.jpg"
-            alt="prj1"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/images/project2-featured-15013609-200x200.jpg"
-            alt="prj2"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/images/project3-featured-189023420-200x200.jpg"
-            alt="prj3"
-          />
-        </div>
+    <section id="projects">
+      <Heading
+        title="Explore Recent Work"
+        text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet dicta ipsam beatae earum aut. Corporis consequatur dolorum similique facilis veritatis nostrum non"
+      />
+      <div class="d-flex align-items-center justify-content-evenly col-12">
+        <ProjectCard prj="prj1" />
+        <ProjectCard prj="prj2" />
+        <ProjectCard prj="prj3" />
       </div>
-      <template v-slot:bottom>
-        <Showmore text="View All Projects" />
-      </template>
-    </Services>
+      <Showmore text="View All Projects" />
+    </section>
 
     <!-- core values -->
-    <Services
-      sectionType="alternative"
-      title="Our Core Values"
-      text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+    <section id="values">
+      <Heading
+        title="Our Core Values"
+        text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
             dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?"
-    >
+      />
       <div class="cards d-flex justify-content-evenly my-5">
-        <Card
-          cardType="standard"
+        <ValuesCard
           title="Great Services"
           text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
-        >
-          <div class="icons"><i class="first fas fa-home fa-3x"></i></div>
-          <template v-slot:middle>
-            <div class="d-flex justify-content-center">
-              <hr class="w-25" />
-            </div>
-          </template>
-        </Card>
-        <Card
-          cardType="standard"
+          icon="first fas fa-home fa-3x"
+        />
+        <ValuesCard
           title="Highest Standards"
           text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
-        >
-          <span class="icons"><i class="second fas fa-cog fa-3x"></i></span>
-          <template v-slot:middle>
-            <div class="d-flex justify-content-center">
-              <hr class="w-25" />
-            </div>
-          </template>
-        </Card>
-        <Card
-          cardType="standard"
+          icon="second fas fa-cog fa-3x"
+        />
+
+        <ValuesCard
           title="Professional Team"
           text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
-        >
-          <span class="icons"><i class="fas third fa-users fa-3x"></i></span>
-          <template v-slot:middle>
-            <div class="d-flex justify-content-center">
-              <hr class="w-25" />
-            </div>
-          </template>
-        </Card>
-        <Card
-          cardType="standard"
+          icon="fas third fa-users fa-3x"
+        />
+        <ValuesCard
           title="Creative Solutions"
           text="Corporis consequatur dolorum similique
             facilis veritatis nostrum"
-        >
-          <span class="icons"
-            ><i class="fourth fas fa-lightbulb fa-3x"></i
-          ></span>
-          <template v-slot:middle>
-            <div class="d-flex justify-content-center">
-              <hr class="w-25" />
-            </div>
-          </template>
-        </Card>
+          icon="fourth fas fa-lightbulb fa-3x"
+        />
       </div>
-    </Services>
+    </section>
 
     <!-- testimonials -->
-    <Home bg="background2">
-      <Services title="Our Home Owners Say" sectionType="testimonial">
-        <figure class="col-2">
-          <img
-            class="rounded-circle img-fluid"
-            src="../assets/images/home-testimonial-113165296.jpg"
-            alt=""
-          />
-        </figure>
+    <section
+      id="testimonial"
+      class="background2 text-light d-flex flex-column align-items-center"
+    >
+      <Heading title="Our Home Owners Say" />
+      <figure>
+        <img
+          class="rounded-circle img-fluid"
+          src="../assets/images/home-testimonial-113165296.jpg"
+          alt=""
+        />
+      </figure>
 
-        <template v-slot:middle>
-          <p class="text-italic">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
-            ducimus earum debitis adipisci nostrum exercitationem in neque,
-            assumenda ipsum, quas provident dolor eius quasi. Dolore modi
-            accusamus blanditiis ut aliquid.
-          </p>
-          <h6 class="text-uppercase">Harry Smith - New Home Owner</h6>
-          <div class="slider">
-            <i class="fas fa-circle px-1"></i>
-            <i class="far fa-circle"></i>
-          </div>
-        </template>
-      </Services>
-    </Home>
+      <p class="text-italic p-3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+        ducimus earum debitis adipisci nostrum exercitationem in neque,
+        assumenda ipsum, quas provident dolor eius quasi. Dolore modi accusamus
+        blanditiis ut aliquid.
+      </p>
+
+      <h6 class="text-uppercase">Harry Smith - New Home Owner</h6>
+      <div class="slider p-3">
+        <i class="fas fa-circle px-1"></i>
+        <i class="far fa-circle"></i>
+      </div>
+    </section>
 
     <!-- latest news -->
-    <Services
-      sectionType="alternative"
-      title="Latest News"
-      text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+    <section id="news" sectionType="alternative">
+      <Heading
+        title="Latest News"
+        text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
             dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?
             "
-      ><div class="d-flex justify-content-evenly col-12">
-        <Card
-          cardType="post"
+      />
+      <div class="d-flex justify-content-evenly col-12">
+        <News
           title="Redeveloping Florida's Remote Southern Coast"
           text="Corporis consequatur dolorum similique
               facilis veritatis nostrum non repudiandae, ratione vero libero
@@ -230,14 +171,8 @@
             src="../assets/images/blog-post-134132600-400x241.jpg"
             alt="post-1"
           />
-          <template v-slot:middle>
-            <Separator>
-              <time> December 3</time>
-            </Separator>
-          </template>
-        </Card>
-        <Card
-          cardType="post"
+        </News>
+        <News
           title="How We Manage Large Construction Projects"
           text="Corporis consequatur dolorum similique
               facilis veritatis nostrum non repudiandae, ratione vero libero
@@ -250,14 +185,8 @@
             src="../assets/images/blog-post-92486644-400x241.jpg"
             alt="post-1"
           />
-          <template v-slot:middle>
-            <Separator>
-              <time> December 3</time>
-            </Separator>
-          </template>
-        </Card>
-        <Card
-          cardType="post"
+        </News>
+        <News
           title="Future proofing a modern home"
           text="Corporis consequatur dolorum similique
               facilis veritatis nostrum non repudiandae, ratione vero libero
@@ -270,24 +199,19 @@
             src="../assets/images/blog-post-332773904-400x241.jpg"
             alt="post-1"
           />
-          <template v-slot:middle>
-            <Separator>
-              <time> December 3</time>
-            </Separator>
-          </template>
-        </Card>
+        </News>
       </div>
-      <template v-slot:bottom>
-        <Showmore text="View More Articles" />
-      </template>
-    </Services>
+      <Showmore text="View More Articles" />
+    </section>
 
-    <Services
-      title="Trusted Partners"
-      text=" Corporis consequatur dolorum similique
+    <!-- partners -->
+    <section id="partners">
+      <Heading
+        title="Trusted Partners"
+        text=" Corporis consequatur dolorum similique
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
             debitis?"
-    >
+      />
       <div class="d-flex justify-content-evenly col-12">
         <figure class="col-2">
           <img
@@ -325,36 +249,44 @@
           />
         </figure>
       </div>
-    </Services>
+    </section>
 
-    <Home bg="background3">
+    <!-- pre footer -->
+    <section id="prefooter" class="background3">
       <div class="d-flex align-items-center h-100">
         <div class="col-8">
-          <Services
-            sectionType="light"
-            alternative="align-left"
-            title="Building Inspiring Spaces"
-            text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+          <div class="content">
+            <Heading
+              mod="light"
+              title="Building Inspiring Spaces"
+              text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
               dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
               facilis veritatis nostrum non repudiandae, ratione vero libero nihil
               debitis?"
-          />
+            />
+          </div>
         </div>
         <div class="col-4">
-          <Button buttonType="basic" text="Get a Free Quote Today!" />
-          <div class="text-light">Only takes a few seconds!</div>
+          <div class="h-100 align-items-center">
+            <Button buttonType="basic" text="Get a Free Quote Today!" />
+            <div class="text-light">Only takes a few seconds!</div>
+          </div>
         </div>
       </div>
-    </Home>
+    </section>
   </div>
 </template>
 
 <script>
 import Banner from "./Banner.vue";
-import Services from "./Services.vue";
+import Slogan from "./Slogan.vue";
+import Heading from "./Heading.vue";
 import Home from "./Home.vue";
 import Card from "./Card.vue";
-import Separator from "./Separator.vue";
+import ProjectCard from "./ProjectCard.vue";
+import ValuesCard from "./ValuesCard.vue";
+import News from "./News.vue";
+
 import Showmore from "./Showmore.vue";
 import Button from "./Button.vue";
 
@@ -362,10 +294,13 @@ export default {
   name: "Main",
   components: {
     Banner,
-    Services,
+    Slogan,
+    Heading,
+    ProjectCard,
+    ValuesCard,
+    News,
     Home,
     Card,
-    Separator,
     Showmore,
     Button,
   },
@@ -374,21 +309,23 @@ export default {
 
 <style lang="scss" scoped>
 @import "../scss/vars";
-@import "../scss/main";
+@import "../scss/_main";
 
-.question {
-  height: 100px;
-  background-color: $secondary;
-  position: relative;
+.background {
+  background-image: url("../assets/images/home-244125289.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.background2 {
+  background-image: url("../assets/images/home-parallax-144609983.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
-  h4 {
-    text-transform: capitalize;
-  }
-  button {
-    position: absolute;
-    right: 50%;
-    transform: translate(50%);
-    bottom: -20px;
-  }
+.background3 {
+  background-image: url("../assets/images/about-call-to-action-57862405.jpg");
+  background-size: cover;
+  background-position-y: 70%;
+  height: 350px;
 }
 </style>

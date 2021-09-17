@@ -13,15 +13,16 @@
         </div>
         <div class="col-6 d-flex align-items-center justify-content-end">
           <nav class="d-flex">
+            <ul class="d-flex align-items-center">
+              <li
+                v-for="link in links"
+                :key="link.id"
+                class="mx-4 d-flex align-items-center"
+              >
+                <a :href="link.path">{{ link.title }}</a>
+              </li>
+            </ul>
             <div class="d-flex align-items-center">
-              <ul class="d-flex align-items-center">
-                <li v-for="link in links" :key="link.id" class="mx-2">
-                  <a :href="link.path">{{ link.title }}</a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
               <Button text="Get Quote" buttonType="basic" />
             </div>
           </nav>
@@ -78,7 +79,6 @@ export default {
 @import "../scss/vars";
 header {
   height: 100px;
-  border: 1px solid black;
   width: 100%;
   figure {
     margin: 0;
@@ -89,11 +89,20 @@ nav {
   ul {
     list-style-type: none;
     margin: 0;
+    li {
+      text-transform: uppercase;
+      font-weight: 500;
+      height: 100px;
+    }
 
     a {
       text-decoration: none;
-      color: black;
+      color: $primary-text;
     }
+  }
+
+  div {
+    width: 120px;
   }
 }
 </style>

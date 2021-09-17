@@ -15,5 +15,6 @@ export default {
 hr {
   width: 80%;
   margin: 0 auto;
+  color: grey;
 }
 </style>

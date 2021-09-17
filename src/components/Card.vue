@@ -37,34 +37,6 @@ export default {
   }
 }
 
-.standard {
-  background-color: transparent;
-  border: transparent;
-  color: #1e1e1e;
-  font-weight: 200;
-  flex-basis: 20%;
-  padding: 10px;
-  .title {
-    color: Black;
-    font-size: 1rem;
-  }
-
-  &:hover i.fas,
-  i.far {
-    background-color: $secondary;
-  }
-  &:hover .title {
-    color: $secondary;
-  }
-  i.far,
-  i.fas {
-    display: inline-block;
-    border-radius: 50%;
-    box-shadow: 0px 0px 2px;
-    padding: 0.5em 0.6em;
-  }
-}
-
 .alternative {
   background: $card-back;
   color: $primary-text;
