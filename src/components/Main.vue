@@ -183,7 +183,6 @@
     <!-- partners -->
     <section id="partners">
       <Heading
-        mod="light"
         title="Trusted Partners"
         text=" Corporis consequatur dolorum similique
             facilis veritatis nostrum non repudiandae, ratione vero libero nihil
@@ -236,10 +235,11 @@
             <Heading
               mod="light"
               title="Building Inspiring Spaces"
-              text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
-              dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
-              facilis veritatis nostrum non repudiandae, ratione vero libero nihil
-              debitis?"
+              text="Lorem
+            ipsum, dolor sit amet consectetur adipisicing elit. Est vel amet
+            dicta ipsam beatae earum aut. Corporis consequatur dolorum similique
+            facilis veritatis nostrum non repudiandae, ratione vero libero nihil
+            debitis?"
             />
           </div>
         </div>

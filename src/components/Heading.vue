@@ -34,6 +34,7 @@ export default {
     background-color: $secondary;
     width: 15%;
   }
+  color: $primary-text;
 }
 
 .light {
