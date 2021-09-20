@@ -15,7 +15,7 @@
           <nav class="d-flex">
             <ul class="d-flex align-items-center">
               <li
-                v-for="(link, index) in links"
+                v-for="(link, index) in linkprop"
                 :key="link.id"
                 class="mx-4 d-flex align-items-center"
                 @click="currentLink(index)"
@@ -46,45 +46,13 @@ import Button from "./Button.vue";
 export default {
   name: "Header",
   components: { Button },
+  props: ["linkprop"],
   data() {
-    return {
-      links: [
-        {
-          id: 1,
-          title: "Home",
-          path: "#",
-          selected: true,
-        },
-        {
-          id: 2,
-          title: "About",
-          path: "#",
-          selected: false,
-        },
-        {
-          id: 3,
-          title: "Services",
-          path: "#",
-          selected: false,
-        },
-        {
-          id: 4,
-          title: "Work",
-          path: "#",
-          selected: false,
-        },
-        {
-          id: 5,
-          title: "Articles",
-          path: "#",
-          selected: false,
-        },
-      ],
-    };
+    return {};
   },
   methods: {
     currentLink(idx) {
-      this.links.forEach((el, ind) => {
+      this.linkprop.forEach((el, ind) => {
         ind == idx ? (el.selected = true) : (el.selected = false);
       });
     },
