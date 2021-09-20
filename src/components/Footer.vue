@@ -101,15 +101,18 @@
         </div>
       </div>
     </div>
+    <Credits />
   </footer>
 </template>
 
 <script>
 import Button from "./Button.vue";
+import Credits from "./Credits.vue";
 export default {
   name: "Footer",
   components: {
     Button,
+    Credits,
   },
 };
 </script>
