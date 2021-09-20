@@ -8,7 +8,15 @@
             RESERVED | POWERED BY MICHAU
           </span>
         </div>
-        <div class="text-end col-6">
+        <div
+          class="
+            text-end
+            col-6
+            d-flex
+            justify-content-center
+            align-items-center
+          "
+        >
           <i class="fab fa-twitter mx-3"></i>
           <i class="fab fa-facebook mx-3"></i>
           <i class="fab fa-youtube mx-3"></i>
